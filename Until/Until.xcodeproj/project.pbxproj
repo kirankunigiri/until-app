@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F09E94E20323E3900AAC320 /* TimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F09E94D20323E3900AAC320 /* TimeManager.swift */; };
 		9F46CBDE2030351A00E1385E /* agenda.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F46CBDD2030351A00E1385E /* agenda.json */; };
 		9F46CBE12030353100E1385E /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F46CBE02030353100E1385E /* SwiftyJSON.swift */; };
 		9F9783B4202FEA90006A9351 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9783B3202FEA90006A9351 /* AppDelegate.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F09E94D20323E3900AAC320 /* TimeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeManager.swift; sourceTree = "<group>"; };
 		9F46CBDD2030351A00E1385E /* agenda.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = agenda.json; sourceTree = "<group>"; };
 		9F46CBE02030353100E1385E /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		9F9783B0202FEA90006A9351 /* Until.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Until.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +131,7 @@
 			children = (
 				9F9783B3202FEA90006A9351 /* AppDelegate.swift */,
 				9F9783B5202FEA90006A9351 /* ViewController.swift */,
+				9F09E94D20323E3900AAC320 /* TimeManager.swift */,
 				9F46CBDC2030350700E1385E /* Helper */,
 				9F9783E520301449006A9351 /* Views */,
 				9F46CBDF2030352000E1385E /* Resource Files */,
@@ -305,6 +308,7 @@
 			files = (
 				9F9783E920302CEE006A9351 /* Constants.swift in Sources */,
 				9F9783B6202FEA90006A9351 /* ViewController.swift in Sources */,
+				9F09E94E20323E3900AAC320 /* TimeManager.swift in Sources */,
 				9F9783E2202FFDD3006A9351 /* CardView.swift in Sources */,
 				9F46CBE12030353100E1385E /* SwiftyJSON.swift in Sources */,
 				9F9783B4202FEA90006A9351 /* AppDelegate.swift in Sources */,

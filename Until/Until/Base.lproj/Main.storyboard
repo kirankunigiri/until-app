@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tuesday, Jan. 21st" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1a-AR-GhH">
-                                <rect key="frame" x="26" y="434" width="255" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1a-AR-GhH">
+                                <rect key="frame" x="26" y="434" width="122" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -92,6 +92,8 @@
                         <outlet property="dayTitleLabel" destination="j1a-AR-GhH" id="PMU-gh-NTM"/>
                         <outlet property="periodCard" destination="WGy-CT-oyx" id="E21-hx-IhU"/>
                         <outlet property="periodTitleLabel" destination="jH9-f6-0KZ" id="VhG-YA-2eQ"/>
+                        <outlet property="subtitleLabel" destination="4h6-Ca-lc8" id="Dh9-xd-PRA"/>
+                        <outlet property="titleLabel" destination="Egg-Tl-7E8" id="23C-Nv-VkK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
