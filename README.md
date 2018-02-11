@@ -34,4 +34,5 @@ It automatically recognizes that weekends are holidays and doesn't give you any 
 
 ![Screen 4](Assets/Screenshots/4.PNG)
 ![Screen 1](Assets/Color-Progression.png)
+
 This is just a cool list of colors I used to dynamically animate the progression bar.
