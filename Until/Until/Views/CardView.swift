@@ -21,6 +21,7 @@ class CardView: UIView {
     var percent: Double = 0 {
         didSet {
             fillLayer!.frame.size.width = CGFloat(percent) * self.frame.size.width
+            fillLayer!.backgroundColor = UIManager.getColorFromPercent(percent: percent).cgColor
         }
     }
     
@@ -51,26 +52,21 @@ class CardView: UIView {
         // UI Setup
         percent = 0
         contentView?.layer.cornerRadius = 14
-        
-//        animated()
+    
+        // For testing only
+        // Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.update), userInfo: nil, repeats: true)
     }
     
-    func animated() {
-        var timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.update), userInfo: nil, repeats: true)
-    }
-    
+    // A test method to quickly animate through a progress cycle
     @objc func update() {
-        guard time <= 1 else { return }
-        time = time + 0.01
-        percent = time
+        guard percent <= 1 else { return }
+        percent = percent + 0.01
         percentLabel.text = "\(Int(percent*100))%"
-        fillLayer!.backgroundColor = UIManager.getColorFromPercent(percent: percent).cgColor
-//        fillLayer!.backgroundColor = blend(from: UIColor(red:1.00, green:0.56, blue:0.39, alpha:1.0), to: UIColor(red:0.33, green:0.52, blue:0.99, alpha:1.0), percent: time).cgColor
     }
 
 }
 
-
+/** Returns a color depending on the midpoint between 2 other colors. Currently unused. */
 func blend(from: UIColor, to: UIColor, percent: Double) -> UIColor {
     var fR : CGFloat = 0.0
     var fG : CGFloat = 0.0

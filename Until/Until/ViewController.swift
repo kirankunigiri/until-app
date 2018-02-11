@@ -30,6 +30,7 @@ class ViewController: UIViewController {
         // If it's the weekend, end the flow here
         guard 0 ... 4 ~= Date().dayNumberOfWeek()! - 2 else {
             titleLabel.text = "No school today."
+            subtitleLabel.text = "Chill and work on some cool stuff."
             periodTitleLabel.text = "The weekend"
             periodCard.percentLabel.text = "No school."
             periodCard.descriptionLabel.text = "Let's get some real work done."
@@ -55,13 +56,7 @@ class ViewController: UIViewController {
         
         // Difference for period
         let difference = info.date.timeIntervalSince1970 - Date().timeIntervalSince1970
-        let timeRemaining = timeIntervalString(difference)
-        
-        // Difference for day
-        let dateList = TimeManager.shared.dateList
-        let totalTimePassed = Date().timeIntervalSince1970 - dateList[0].timeIntervalSince1970
-        let totalTimeDay = dateList[dateList.count - 1].timeIntervalSince1970 - dateList[0].timeIntervalSince1970
-        let timeRemaining2 = timeIntervalString(difference2)
+        let periodTimeRemainingText = timeIntervalString(difference)
         
         // Check if school is already over
         if info.state == .afterSchool {
@@ -75,19 +70,31 @@ class ViewController: UIViewController {
         // Check if it's before school
         if info.state == .beforeSchool {
             periodCard.percentLabel.text = "Get some sleep."
-            periodCard.descriptionLabel.text = "\(timeRemaining)"
+            periodCard.descriptionLabel.text = periodTimeRemainingText
             periodCard.percent = 0
             hideDayViews()
             return
         }
         
-        // Setup day card
-        showDayViews()
-        dayCard.percentLabel.text =  totalTimePassed/totalTimeDay
+        // The date is now during school. Proceed with all card updates.
         
+        // Calculate day card variables
+        let dateList = TimeManager.shared.dateList
+        let totalTimePassed = Date().timeIntervalSince1970 - dateList[0].timeIntervalSince1970
+        let totalTimeDay = dateList[dateList.count - 1].timeIntervalSince1970 - dateList[0].timeIntervalSince1970
+        let timeLeftInDay = dateList[dateList.count - 1].timeIntervalSince1970 - Date().timeIntervalSince1970
+        let dayTimeRemainingText = timeIntervalString(timeLeftInDay)
+        
+        // Update period card
         periodCard.percent = 1.0 - difference/info.totalTime
         periodCard.percentLabel.text = "\(Int(periodCard.percent*100))%"
-        periodCard.descriptionLabel.text = "\(timeRemaining)"
+        periodCard.descriptionLabel.text = periodTimeRemainingText
+        
+        // Update day card
+        showDayViews()
+        dayCard.percent =  totalTimePassed/totalTimeDay
+        dayCard.percentLabel.text = "\(Int(dayCard.percent*100))%"
+        dayCard.descriptionLabel.text = dayTimeRemainingText
     }
     
     // MARK: - UI Methods
