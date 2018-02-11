@@ -22,17 +22,17 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eMn-iP-Zap">
-                    <rect key="frame" x="96.5" y="86" width="183" height="69.5"/>
+                    <rect key="frame" x="79.5" y="83.5" width="217.5" height="74.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="38%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kg7-7f-xVC">
-                            <rect key="frame" x="0.0" y="0.0" width="183" height="48"/>
+                            <rect key="frame" x="0.0" y="0.0" width="217.5" height="48"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 minutes remaining" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOz-da-SkE">
-                            <rect key="frame" x="0.0" y="48" width="183" height="21.5"/>
-                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                            <rect key="frame" x="0.0" y="48" width="217.5" height="26.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>

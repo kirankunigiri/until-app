@@ -24,6 +24,13 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        // Update card heights
+        print(periodCard.frame.size.height)
+        let cardHeight = (self.view.frame.size.height - 256)/2
+        print(cardHeight)
+        periodCard.frame.size.height = cardHeight
+        dayCard.frame.size.height = cardHeight
+        
         // Update title label
         titleLabel.text = TimeManager.todayString
         
@@ -87,14 +94,14 @@ class ViewController: UIViewController {
         
         // Update period card
         periodCard.percent = 1.0 - difference/info.totalTime
-        periodCard.percentLabel.text = "\(Int(periodCard.percent*100))%"
-        periodCard.descriptionLabel.text = periodTimeRemainingText
+        periodCard.percentLabel.text = periodTimeRemainingText
+        periodCard.descriptionLabel.text = "\(Int(periodCard.percent*100))%"
         
         // Update day card
         showDayViews()
         dayCard.percent =  totalTimePassed/totalTimeDay
-        dayCard.percentLabel.text = "\(Int(dayCard.percent*100))%"
-        dayCard.descriptionLabel.text = dayTimeRemainingText
+        dayCard.percentLabel.text = dayTimeRemainingText
+        dayCard.descriptionLabel.text = "\(Int(dayCard.percent*100))%"
     }
     
     // MARK: - UI Methods
