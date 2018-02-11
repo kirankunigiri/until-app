@@ -17,6 +17,7 @@
 		9F9783E2202FFDD3006A9351 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9783E1202FFDD3006A9351 /* CardView.swift */; };
 		9F9783E420301443006A9351 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F9783E320301443006A9351 /* CardView.xib */; };
 		9F9783E7203019FF006A9351 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9783E6203019FF006A9351 /* Extensions.swift */; };
+		9F9783E920302CEE006A9351 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9783E820302CEE006A9351 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		9F9783E1202FFDD3006A9351 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		9F9783E320301443006A9351 /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
 		9F9783E6203019FF006A9351 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		9F9783E820302CEE006A9351 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				9F9783B3202FEA90006A9351 /* AppDelegate.swift */,
 				9F9783B5202FEA90006A9351 /* ViewController.swift */,
 				9F9783E6203019FF006A9351 /* Extensions.swift */,
+				9F9783E820302CEE006A9351 /* Constants.swift */,
 				9F9783E520301449006A9351 /* Views */,
 				9F9783B7202FEA90006A9351 /* Main.storyboard */,
 				9F9783BA202FEA90006A9351 /* Assets.xcassets */,
@@ -277,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F9783E920302CEE006A9351 /* Constants.swift in Sources */,
 				9F9783B6202FEA90006A9351 /* ViewController.swift in Sources */,
 				9F9783E2202FFDD3006A9351 /* CardView.swift in Sources */,
 				9F9783B4202FEA90006A9351 /* AppDelegate.swift in Sources */,

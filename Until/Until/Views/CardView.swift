@@ -65,7 +65,8 @@ class CardView: UIView {
         time = time + 0.01
         percent = time
         percentLabel.text = "\(Int(percent*100))%"
-        fillLayer!.backgroundColor = blend(from: UIColor(red:1.00, green:0.56, blue:0.39, alpha:1.0), to: UIColor(red:0.33, green:0.52, blue:0.99, alpha:1.0), percent: time).cgColor
+        fillLayer!.backgroundColor = UTManager.getColorFromPercent(percent: percent).cgColor
+//        fillLayer!.backgroundColor = blend(from: UIColor(red:1.00, green:0.56, blue:0.39, alpha:1.0), to: UIColor(red:0.33, green:0.52, blue:0.99, alpha:1.0), percent: time).cgColor
     }
 
 }
