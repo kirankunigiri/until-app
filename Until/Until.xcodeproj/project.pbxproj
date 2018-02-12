@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F46CBDE2030351A00E1385E /* agenda.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F46CBDD2030351A00E1385E /* agenda.json */; };
+		9F46CBE12030353100E1385E /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F46CBE02030353100E1385E /* SwiftyJSON.swift */; };
 		9F9783B4202FEA90006A9351 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9783B3202FEA90006A9351 /* AppDelegate.swift */; };
 		9F9783B6202FEA90006A9351 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9783B5202FEA90006A9351 /* ViewController.swift */; };
 		9F9783B9202FEA90006A9351 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9783B7202FEA90006A9351 /* Main.storyboard */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F46CBDD2030351A00E1385E /* agenda.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = agenda.json; sourceTree = "<group>"; };
+		9F46CBE02030353100E1385E /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		9F9783B0202FEA90006A9351 /* Until.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Until.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F9783B3202FEA90006A9351 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F9783B5202FEA90006A9351 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +86,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F46CBDC2030350700E1385E /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				9F46CBE02030353100E1385E /* SwiftyJSON.swift */,
+				9F9783E6203019FF006A9351 /* Extensions.swift */,
+				9F9783E820302CEE006A9351 /* Constants.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		9F46CBDF2030352000E1385E /* Resource Files */ = {
+			isa = PBXGroup;
+			children = (
+				9F46CBDD2030351A00E1385E /* agenda.json */,
+			);
+			path = "Resource Files";
+			sourceTree = "<group>";
+		};
 		9F9783A7202FEA8F006A9351 = {
 			isa = PBXGroup;
 			children = (
@@ -107,9 +129,9 @@
 			children = (
 				9F9783B3202FEA90006A9351 /* AppDelegate.swift */,
 				9F9783B5202FEA90006A9351 /* ViewController.swift */,
-				9F9783E6203019FF006A9351 /* Extensions.swift */,
-				9F9783E820302CEE006A9351 /* Constants.swift */,
+				9F46CBDC2030350700E1385E /* Helper */,
 				9F9783E520301449006A9351 /* Views */,
+				9F46CBDF2030352000E1385E /* Resource Files */,
 				9F9783B7202FEA90006A9351 /* Main.storyboard */,
 				9F9783BA202FEA90006A9351 /* Assets.xcassets */,
 				9F9783BC202FEA90006A9351 /* LaunchScreen.storyboard */,
@@ -256,6 +278,7 @@
 				9F9783BB202FEA90006A9351 /* Assets.xcassets in Resources */,
 				9F9783E420301443006A9351 /* CardView.xib in Resources */,
 				9F9783B9202FEA90006A9351 /* Main.storyboard in Resources */,
+				9F46CBDE2030351A00E1385E /* agenda.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +306,7 @@
 				9F9783E920302CEE006A9351 /* Constants.swift in Sources */,
 				9F9783B6202FEA90006A9351 /* ViewController.swift in Sources */,
 				9F9783E2202FFDD3006A9351 /* CardView.swift in Sources */,
+				9F46CBE12030353100E1385E /* SwiftyJSON.swift in Sources */,
 				9F9783B4202FEA90006A9351 /* AppDelegate.swift in Sources */,
 				9F9783E7203019FF006A9351 /* Extensions.swift in Sources */,
 			);

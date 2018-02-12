@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable
+//@IBDesignable
 class CardView: UIView {
     
     // MARK: Outlets
@@ -23,13 +23,12 @@ class CardView: UIView {
             fillLayer!.frame.size.width = CGFloat(percent) * self.frame.size.width
         }
     }
-    @IBInspectable var nibName: String?
-
-    override func prepareForInterfaceBuilder() {
-        super.prepareForInterfaceBuilder()
-        viewSetup()
-        contentView?.prepareForInterfaceBuilder()
-    }
+    
+//    override func prepareForInterfaceBuilder() {
+//        super.prepareForInterfaceBuilder()
+//        viewSetup()
+//        contentView?.prepareForInterfaceBuilder()
+//    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -53,7 +52,7 @@ class CardView: UIView {
         percent = 0
         contentView?.layer.cornerRadius = 14
         
-        animated()
+//        animated()
     }
     
     func animated() {
@@ -65,7 +64,7 @@ class CardView: UIView {
         time = time + 0.01
         percent = time
         percentLabel.text = "\(Int(percent*100))%"
-        fillLayer!.backgroundColor = UTManager.getColorFromPercent(percent: percent).cgColor
+        fillLayer!.backgroundColor = UIManager.getColorFromPercent(percent: percent).cgColor
 //        fillLayer!.backgroundColor = blend(from: UIColor(red:1.00, green:0.56, blue:0.39, alpha:1.0), to: UIColor(red:0.33, green:0.52, blue:0.99, alpha:1.0), percent: time).cgColor
     }
 

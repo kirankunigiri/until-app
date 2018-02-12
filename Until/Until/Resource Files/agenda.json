@@ -1,0 +1,59 @@
+{
+  "Cupertino High School": [
+    [
+      "Before school@13:00",
+     "Period 1@13:01",
+     "Period 2@13:03",
+      "Period 3@13:05",
+      "Brunch@13:07",
+      "Period 4@13:09",
+      "Period 5@13:011",
+      "Lunch@13:13",
+      "Period 6@13:15",
+      "Period 7@13:17"
+    ],
+    [
+      "Before school@7:35",
+      "Period 1@8:25",
+      "Period 2@9:20",
+      "Period 3@10:20",
+      "Brunch@10:35",
+      "Period 4@11:30",
+      "Period 5@12:25",
+      "Lunch@13:05",
+      "Period 6@14:00",
+      "Period 7@14:55"
+    ],
+    [
+      "Before school@9:00",
+      "Period 2@10:25",
+      "Tutorial@11:05",
+      "Brunch@11:20",
+      "Period 4@12:45",
+      "Lunch@13:30",
+      "Period 6@14:55"
+    ],
+    [
+      "Before school@7:35",
+      "Period 1@8:55",
+      "Tutorial@9:35",
+      "Period 3@11:05",
+      "Brunch@11:20",
+      "Period 5@12:45",
+      "Lunch@13:30",
+      "Period 7@14:55"
+    ],
+    [
+      "Before school@7:35",
+      "Period 1@8:25",
+      "Period 2@9:20",
+      "Period 3@10:20",
+      "Brunch@10:35",
+      "Period 4@11:30",
+      "Period 5@12:25",
+      "Lunch@13:05",
+      "Period 6@14:00",
+      "Period 7@14:55"
+    ]
+  ]
+}

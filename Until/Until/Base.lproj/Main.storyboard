@@ -87,6 +87,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="dayCard" destination="S3j-4v-XxM" id="tdS-Ep-CDR"/>
+                        <outlet property="dayTitleLabel" destination="j1a-AR-GhH" id="PMU-gh-NTM"/>
+                        <outlet property="periodCard" destination="WGy-CT-oyx" id="E21-hx-IhU"/>
+                        <outlet property="periodTitleLabel" destination="jH9-f6-0KZ" id="VhG-YA-2eQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
