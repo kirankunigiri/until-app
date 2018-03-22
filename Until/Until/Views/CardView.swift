@@ -25,12 +25,6 @@ class CardView: UIView {
         }
     }
     
-//    override func prepareForInterfaceBuilder() {
-//        super.prepareForInterfaceBuilder()
-//        viewSetup()
-//        contentView?.prepareForInterfaceBuilder()
-//    }
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         viewSetup()

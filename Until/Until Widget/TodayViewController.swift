@@ -1,45 +1,31 @@
 //
-//  ViewController.swift
-//  Until
+//  TodayViewController.swift
+//  Until Widget
 //
-//  Created by Kiran Kunigiri on 2/10/18.
+//  Created by Kiran Kunigiri on 3/22/18.
 //  Copyright © 2018 Kiran Kunigiri. All rights reserved.
 //
 
 import UIKit
+import NotificationCenter
 
-class ViewController: UIViewController {
-
-    // MARK: - Outlets
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var subtitleLabel: UILabel!
+class TodayViewController: UIViewController, NCWidgetProviding {
+        
     @IBOutlet weak var periodCard: CardView!
-    @IBOutlet weak var dayCard: CardView!
     
-    // MARK: - Properties
-    @IBOutlet weak var periodTitleLabel: UILabel!
-    @IBOutlet weak var dayTitleLabel: UILabel!
-    
-    // MARK: - Logic Methods
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
-        // Update card heights
-        let cardHeight = (self.view.frame.size.height - 256)/2
-        periodCard.frame.size.height = cardHeight
-        dayCard.frame.size.height = cardHeight
-        
-        // Update title label
-        titleLabel.text = TimeManager.todayString
+        // Update card view UI
+        periodCard.contentView?.backgroundColor = UIColor.clear
+        periodCard.contentView?.layer.cornerRadius = 0
+        periodCard.fillLayer?.frame.size.height = self.view.frame.size.height
+        periodCard.percent = 0.8
         
         // If it's the weekend, end the flow here
         guard 0 ... 4 ~= Date().dayNumberOfWeek()! - 2 else {
-            titleLabel.text = "No school today."
-            subtitleLabel.text = "Chill and work on some cool stuff."
-            periodTitleLabel.text = "The weekend"
             periodCard.percentLabel.text = "No school."
             periodCard.descriptionLabel.text = "Let's get some real work done."
-            hideDayViews()
             return
         }
         
@@ -51,13 +37,13 @@ class ViewController: UIViewController {
         Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(update), userInfo: nil, repeats: true)
     }
     
+    
     // Constantly update the UI with the new times
     @objc
     func update() {
         
         // Setup all info and variables
         let info = TimeManager.shared.closestDateInfo
-        periodTitleLabel.text = info.name
         
         // Difference for period
         let difference = info.date.timeIntervalSince1970 - Date().timeIntervalSince1970
@@ -68,7 +54,6 @@ class ViewController: UIViewController {
             periodCard.percentLabel.text = "School's over."
             periodCard.descriptionLabel.text = "Let's get some real work done."
             periodCard.percent = 0
-            hideDayViews()
             return
         }
         
@@ -77,7 +62,6 @@ class ViewController: UIViewController {
             periodCard.percentLabel.text = "Get some sleep."
             periodCard.descriptionLabel.text = periodTimeRemainingText
             periodCard.percent = 0
-            hideDayViews()
             return
         }
         
@@ -94,23 +78,6 @@ class ViewController: UIViewController {
         periodCard.percent = 1.0 - difference/info.totalTime
         periodCard.percentLabel.text = periodTimeRemainingText
         periodCard.descriptionLabel.text = "\(Int(periodCard.percent*100))%"
-        
-        // Update day card
-        showDayViews()
-        dayCard.percent =  totalTimePassed/totalTimeDay
-        dayCard.percentLabel.text = dayTimeRemainingText
-        dayCard.descriptionLabel.text = "\(Int(dayCard.percent*100))%"
-    }
-    
-    // MARK: - UI Methods
-    func hideDayViews() {
-        dayTitleLabel.isHidden = true
-        dayCard.isHidden = true
-    }
-    
-    func showDayViews() {
-        dayTitleLabel.isHidden = false
-        dayCard.isHidden = false
     }
     
     /** Returns a string in hh:mm format given a `TimeInterval` */
@@ -120,32 +87,19 @@ class ViewController: UIViewController {
         return dateComponentsFormatter.string(from: interval)!
     }
     
-    
-    
-    // MARK: - Debug Methods
-    
-    /** Prints the entire schedule */
-    func printCurrentSchedule() {
-        for date in TimeManager.shared.dateList {
-            print(timeString(date))
-        }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
-    /** Converts a `Date` into a readable string for UI display */
-    func timeString(_ date: Date) -> String {
-        let outFormatter = DateFormatter()
-        outFormatter.locale = Locale(identifier: "en_US_POSIX")
-        outFormatter.dateFormat = "hh:mm"
-        return outFormatter.string(from: date)
-    }
-    
-    /** A secondary method to convert a time interval into a string. Currently not in use */
-    func stringFromTimeInterval(interval: TimeInterval) -> String {
-        let interval = Int(interval)
-        let seconds = interval % 60
-        let minutes = (interval / 60) % 60
-        let hours = (interval / 3600)
-        return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
+    func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
+        // Perform any setup necessary in order to update the view.
+        
+        // If an error is encountered, use NCUpdateResult.Failed
+        // If there's no update required, use NCUpdateResult.NoData
+        // If there's an update, use NCUpdateResult.NewData
+        
+        completionHandler(NCUpdateResult.newData)
     }
     
 }
